@@ -87,7 +87,7 @@ var log = function(msg, level) {
 	return may.log(msg, level, 'may:Loader');
 };
 
-var	assert = function(bool, message) {
+var assert = function(bool, message) {
 	bool || may.error(message);
 };
 
@@ -474,7 +474,7 @@ var loadCss = function(url, success, error) {
 };
 
 
-var rCss = /\.css(\?[\w_]*)?$/;
+var rCss = /\.css(\?[-\w]*)?$/;
 var loadResource = function(url, options) {
 	if (rCss.test(url)) {
 		loadCss(url, options.success, options.error);
